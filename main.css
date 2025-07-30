@@ -1,0 +1,9 @@
+body {
+        background: linear-gradient(to bottom, #fa7070, #994b84);
+        height: 100vh;
+        margin: 0;
+}
+
+.list {
+        background: #d05781;
+}
