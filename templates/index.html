@@ -8,35 +8,57 @@
                 </title>
                 <link rel="icon" href="static/img/favicon.ico">
                 <link rel="stylesheet" href="static/css/style.css">
+                <script src="static/js/script.js" defer></script>
         </head>
         <body>
+                <div id="nav"> 
+                        <div class="resources"> 
+                                <div class="link">
+                                        <button id="proj"> Projects </button>
+                                </div>
+                                <div class="link">
+                                        <button id="cert"> Certifications </button>
+                                </div>
+                                <div class="link">
+                                        <button id="lang"> Languages </button>
+                                </div>
+                        </div>
 
-                <div class="resources"> 
-                        <div class="textLink">
-                                <button id="proj"> Projects </button>
+                        <div id="slider">
+                                <img id="carousel" class="showProj" src="static/img/carouselPink-500x500.gif" alt="Slime" width="500" height="500">
                         </div>
-                        <div class="textLink">
-                                <button id="cert"> Certifications </button>
-                        </div>
-                        <div class="textLink">
-                                <button id="lang"> Languages </button>
+
+                        <div class="resources">
+                                <a class="link" href="https://github.com/crensing7" target="_blank">
+                                        <img src="static/img/github-200x200.png" width="40" height="40">
+                                </a>
+                                <a class="link" href="https://linkedin.com/in/cameron-rensing/" target="_blank">
+                                        <img src="static/img/linkedin-200x200.png" width="40" height="40">
+                                </a>
+                                <a class="link" href="https://monkeytype.com/profile/neusop" target="_blank">
+                                        <img src="static/img/monkeytype-200x200.png" width="50" height="40">
+                                </a>
+                                <a class="link" href="https://www.credly.com/users/cameron-rensing" target="_blank">
+                                        <img src="static/img/credly-300x300.png" width="50" height="40">
+                                </a>
+
                         </div>
                 </div>
-
-                <div id="carousel">
-                        <img src="static/img/carouselPink-500x500.gif" alt="Slime" width="500" height="500">
-                </div>
-
-                <div class="resources">
-                        <a class="imgLink" href="https://github.com/crensing7" target="_blank">
-                                <img src="static/img/github-200x200.png" width="40" height="40">
-                        </a>
-                        <a class="imgLink" href="https://linkedin.com/in/cameron-rensing/" target="_blank">
-                                <img src="static/img/linkedin-200x200.png" width="40" height="40">
-                        </a>
-                        <a class="imgLink" href="https://monkeytype.com/profile/neusop" target="_blank">
-                                <img src="static/img/monkeytype-200x200.png" width="50" height="40">
-                        </a>
+                <div id="certifications">
+                        <div class="badge">
+                                <img id="comptiaA" class="unlocked" src="static/img/comptiaA-300x300.png" width="200" height="200">
+                        </div>
+                        <div class="badge">
+                                <img id="ccna" class="unlocked" src="static/img/ccna-300x300.png" width="200" height="200">
+                        </div>
+                        <div class="badge">
+                                <img id="comptiaS" class="locked" src="static/img/comptiaS-300x300.png" width="200" height="200">
+                                <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
+                        </div>
+                        <div class="badge">
+                                <img id="comptiaL" class="locked" src="static/img/comptiaL-300x300.png" width="200" height="200">
+                                <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
+                        </div>
                 </div>
         </body>
 </html>
