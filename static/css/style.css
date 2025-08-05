@@ -21,7 +21,7 @@ html, body {
 
         width: fit-content;
 
-        margin: 5px;
+        margin: 5px 0px 10px 0px;
         padding: 5px 10px;
         border-radius: 10px;
 }
@@ -43,7 +43,7 @@ html, body {
 
         font-family: Courier Sans, monospace;
         font-weight: bold;
-        font-size: 18;
+        font-size: 18px;
 
         border: none;
         padding: 7px 15px;
@@ -54,10 +54,17 @@ html, body {
 }
 
 .link img {
-        padding: 0px 25px;
+        display: block;
+        padding: 0;
+}
+
+a.link {
+        z-index: 10;
+        position: relative;
 }
 
 #carousel {
+        z-index: 1;
         transition: transform 0.5s ease, left 0.5s ease;
         position: relative;
         border-radius: 10px;
@@ -73,28 +80,59 @@ html, body {
         transform: none;
 }
 
-.showCert {
+.showLang {
         left: 100%;
         transform: translateX(-100%);
 }
 
-.showLang {
+.showCert {
         left: 0%;
         transform: none;
 }
 
 
+#languages {
+        width: 60%;
+        position: absolute;
+        left: -20%;
+}
+
+#languages img {
+        padding: 0px;
+        margin: 15px;
+}
+
 #certifications {
         text-align: center;
+}
+
+.hidden {
         position: absolute;
         top: 50%;
+        opacity: 0;
+        transform: translateY(50%);
+}
+
+.show {
+        position: absolute;
+        top: 50%;
+        opacity: 1;
         transform: translateY(-50%);
+        transition-delay: 0.3s;
+        transition-property: transform, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
 }
 
 .badge {
         display: inline-block;
         position: relative;
         left: 53%;
+}
+
+.badge img {
+        border-radius: 30px;
+        margin: 0px 45px;
 }
 
 .unlocked {
@@ -121,10 +159,6 @@ html, body {
         opacity: 0.85;
 }
 
-.badge img {
-        border-radius: 30px;
-        margin: 0px 45px;
-}
 
 
 
