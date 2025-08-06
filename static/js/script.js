@@ -2,12 +2,23 @@ const projButton = document.getElementById('proj');
 const certButton = document.getElementById('cert');
 const langButton = document.getElementById('lang');
 const carousel = document.getElementById('carousel');
+const projDiv = document.getElementById('projects');
 const certsDiv = document.getElementById('certifications');
 const langsDiv = document.getElementById('languages');
 
 function setCarouselState(state) {
-        carousel.classList.remove('showProj', 'showCert', 'showLang');
+        carousel.classList.remove('left', 'center', 'right');
         carousel.classList.add(state);
+}
+
+function setProjVisibility(show) {
+        if (show) {
+                projDiv.classList.add('show');
+                projDiv.classList.remove('hidden');
+        } else {
+                projDiv.classList.add('hidden');
+                projDiv.classList.remove('show');
+        }
 }
 
 function setCertsVisibility(show) {
@@ -32,19 +43,22 @@ function setLangsVisibility(show) {
 
 projButton.addEventListener('click', () => {
         console.log('proj');
-        setCarouselState('showProj');
+        setCarouselState('left');
+        setProjVisibility(true);
         setCertsVisibility(false);
         setLangsVisibility(false);
 });
 langButton.addEventListener('click', () => {
         console.log('lang');
-        setCarouselState('showLang');
+        setCarouselState('right');
+        setProjVisibility(false);
         setCertsVisibility(false);
         setLangsVisibility(true);
 });
 certButton.addEventListener('click', () => {
         console.log('cert');
-        setCarouselState('showCert');
+        setCarouselState('left');
+        setProjVisibility(false);
         setCertsVisibility(true);
         setLangsVisibility(false);
 });

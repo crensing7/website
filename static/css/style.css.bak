@@ -1,0 +1,173 @@
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #000, #994b84);
+}
+
+#nav {
+        position: absolute;
+        width: 100vw;
+        top: 50%;
+        transform: translateY(-50%);
+}
+
+.resources {
+        position: relative;
+        left: 50%;
+        transform: translateX(-51%);
+
+        background-color: #fff;
+
+        width: fit-content;
+
+        margin: 5px 0px 10px 0px;
+        padding: 5px 10px;
+        border-radius: 10px;
+}
+
+.link {
+        display: inline-block;
+        background-color: #ddd;
+
+        padding: 5px 10px;
+        border-radius: 10px;
+
+        transition: background-color 0.2s ease;
+}
+
+.link button {
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+
+        font-family: Courier Sans, monospace;
+        font-weight: bold;
+        font-size: 18px;
+
+        border: none;
+        padding: 7px 15px;
+}
+
+.link:hover {
+        background-color: #777;
+}
+
+.link img {
+        display: block;
+        padding: 0;
+}
+
+a.link {
+        z-index: 10;
+        position: relative;
+}
+
+#carousel {
+        z-index: 1;
+        transition: transform 0.5s ease, left 0.5s ease;
+        position: relative;
+        border-radius: 10px;
+}
+
+.centered {
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+.showProj {
+        left: 0%;
+        transform: none;
+}
+
+.showLang {
+        left: 100%;
+        transform: translateX(-100%);
+}
+
+.showCert {
+        left: 0%;
+        transform: none;
+}
+
+
+#languages {
+        width: 60%;
+        position: absolute;
+        left: -20%;
+}
+
+#languages img {
+        padding: 0px;
+        margin: 15px;
+}
+
+#certifications {
+        text-align: center;
+}
+
+.hidden {
+        position: absolute;
+        top: 50%;
+        opacity: 0;
+        transform: translateY(50%);
+}
+
+.show {
+        position: absolute;
+        top: 50%;
+        opacity: 1;
+        transform: translateY(-50%);
+        transition-delay: 0.3s;
+        transition-property: transform, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+}
+
+.badge {
+        display: inline-block;
+        position: relative;
+        left: 53%;
+}
+
+.badge img {
+        border-radius: 30px;
+        margin: 0px 45px;
+}
+
+.unlocked {
+        transition: transform 0.2s ease-in-out;
+}
+
+.unlocked:hover {
+        transform: scale(1.1);
+}
+
+.locked, .lock-symbol {
+        filter: grayscale(90%);
+        filter: brightness(40%);
+}
+
+.lock-symbol {
+        position: absolute;
+        left: 0%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+}
+
+.lock-symbol:hover {
+        opacity: 0.85;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

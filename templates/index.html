@@ -12,82 +12,68 @@
                 <script src="static/js/script.js" defer></script>
         </head>
         <body>
-                <div id="nav"> 
-                        <div class="resources"> 
-                                <div class="link">
-                                        <button id="proj"> Projects </button>
-                                </div>
-                                <div class="link">
-                                        <button id="lang"> Languages </button>
-                                </div>
-                                <div class="link">
-                                        <button id="cert"> Certifications </button>
-                                </div>
+                <div id="menu">
+                        <div id="navigation"> 
+                                <button id="proj"> Projects </button>
+                                <button id="lang"> Languages </button>
+                                <button id="cert"> Certifications </button>
                         </div>
 
                         <div id="slider">
-                                <img id="carousel" class="centered" src="static/img/carouselPink-500x500.gif" alt="Slime" width="500" height="500">
+                                <img id="carousel" class="left" src="static/img/carouselPink-500x500.gif" width="500" height="500">
                         </div>
 
-                        <div class="resources">
-                                <a class="link" href="https://github.com/crensing7" target="_blank">
-                                        <img src="static/img/github-200x200.png" width="40" height="40">
-                                </a>
-                                <a class="link" href="https://linkedin.com/in/cameron-rensing/" target="_blank">
-                                        <img src="static/img/linkedin-200x200.png" width="40" height="40">
-                                </a>
-                                <a class="link" href="https://monkeytype.com/profile/neusop" target="_blank">
-                                        <img src="static/img/monkeytype-200x200.png" width="50" height="40">
-                                </a>
-                                <a class="link" href="https://www.credly.com/users/cameron-rensing" target="_blank">
-                                        <img src="static/img/credly-300x300.png" width="50" height="40">
-                                </a>
+                        <div id="resources">
+                                <a href="https://github.com/crensing7" target="_blank">
+                                        <img src="static/img/github-200x200.png" width="40" height="40"></a>
 
+                                <a href="https://linkedin.com/in/cameron-rensing/" target="_blank">
+                                        <img src="static/img/linkedin-200x200.png" width="40" height="40"></a>
+
+                                <a href="https://monkeytype.com/profile/neusop" target="_blank">
+                                        <img src="static/img/monkeytype-200x200.png" width="50" height="40"></a>
+
+                                <a href="https://credly.com/users/cameron-rensing" target="_blank">
+                                        <img src="static/img/credly-300x300.png" width="50" height="40"></a>
                         </div>
                 </div>
+                
+                <div id="showcase">
+                        <div id="projects" class="hidden">
+                                <img id="nand2tetris" src="static/img/n2t-300x300.png" width="200" height="200">
+                                <img id="ctf" src="static/img/ctf-300x300.png" width="200" height="200">
+                                <img id="website" src="static/img/website-300x300.png" width="200" height="200">
+                                <img id="lfs" src="static/img/lfs-300x300.png" width="200" height="200">
+                        </div>
 
-                <div id="languages" class="hidden">
-                        <div class="badge">
-                                <img id="asmLang" class="unlocked" src="static/img/x86-300x300.png" width="200" height="200">
+                        <div id="languages" class="hidden">
+                                <img id="asmLang" src="static/img/x86-300x300.png" width="200" height="200">
+                                <img id="vimLang" src="static/img/vim-300x300.png" width="200" height="200">
+                                <img id="bashLang" src="static/img/bash-300x300.png" width="200" height="200">
+                                <img id="pythonLang" src="static/img/python-300x300.png" width="200" height="200">
+                                <div class="locked">
+                                        <img id="cLang" class="locked-img" src="static/img/c-300x300.png" width="200" height="200">
+                                        <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
+                                </div>
+                                <img id="htmlLang" src="static/img/html-300x300.png" width="200" height="200">
+                                <img id="cssLang" src="static/img/css-300x300.png" width="200" height="200">
+                                <div class="locked">
+                                        <img id="jsLang" class="locked-img" src="static/img/js-300x300.png" width="200" height="200">
+                                        <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
+                                </div>
                         </div>
-                        <div class="badge">
-                                <img id="vimLang" class="unlocked" src="static/img/vim-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="bashLang" class="unlocked" src="static/img/bash-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="pythonLang" class="unlocked" src="static/img/python-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="cLang" class="unlocked" src="static/img/c-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="htmlLang" class="unlocked" src="static/img/html-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="cssLang" class="unlocked" src="static/img/css-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="jsLang" class="locked" src="static/img/js-300x300.png" width="200" height="200">
-                                <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
-                        </div>
-                </div>
 
-                <div id="certifications" class="hidden">
-                        <div class="badge">
-                                <img id="comptiaA" class="unlocked" src="static/img/comptiaA-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="ccna" class="unlocked" src="static/img/ccna-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="comptiaS" class="locked" src="static/img/comptiaS-300x300.png" width="200" height="200">
-                                <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
-                        </div>
-                        <div class="badge">
-                                <img id="comptiaL" class="locked" src="static/img/comptiaL-300x300.png" width="200" height="200">
-                                <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
+                        <div id="certifications" class="hidden">
+                                <img id="comptiaA" src="static/img/comptiaA-300x300.png" width="200" height="200">
+                                <img id="ccna" src="static/img/ccna-300x300.png" width="200" height="200">
+                                <div class="locked">
+                                        <img id="comptiaS" class="locked-img" src="static/img/comptiaS-300x300.png" width="200" height="200">
+                                        <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
+                                </div>
+                                <div class="locked">
+                                        <img id="comptiaL" class="locked-img" src="static/img/comptiaL-300x300.png" width="200" height="200">
+                                        <img class="lock-symbol" src="static/img/lock-300x300.png" width="200" height="200">
+                                </div>
                         </div>
                 </div>
         </body>
