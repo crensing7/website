@@ -13,38 +13,30 @@ img, button {
         border-radius: 10px;
 }
 
+p, button {
+        font-family: Courier Sans, monospace;
+        font-weight: bold;
+}
+
+
 #navigation button {
-        background-color: #ccc;
+        background-color: #fff;
 
         outline: none;
         border: none;
         border-radius: 10px;
         padding: 10px;
+        margin: 0px 8px 10px 8px;
 
-        font-family: Courier Sans, monospace;
         font-size: 20px;
-        font-weight: bold;
 }
 
 #resources img {
-        background-color: #ccc;
+        background-color: #fff;
 
+        margin: 8px 8px 0px 8px;
         padding: 10px;
 }
-
-.locked {
-        position: relative;
-        display: inline-block;
-        filter: brightness(.6);
-}
-
-.lock-symbol {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 1;
-}
-
 
 #menu {
         display: flex;
@@ -84,71 +76,95 @@ img, button {
 
 
 
+.unlocked {
+        transition: transform 0.2s ease;
+}
 
+.unlocked:hover, .highlight {
+        transform: scale(1.1);
+}
 
+.locked {
+        position: relative;
+        display: inline-block;
+        filter: brightness(20%);
+}
 
+.lock-symbol {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+}
 
+.description {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+}
 
+.description p {
+        font-size: 40px;
+        color: #fff; 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#showcase img {
+        margin: 1em 2em;
+}
 
 #projects {
         position: absolute;
-        width: 850px;
+        width: 80%;
         top: 50%;
-        left: 100%;
+        left: 91%;
         transform: translate(-100%, -50%);
         text-align: right;
 }
 
 #languages {
         position: absolute;
-        width: 850px;
-        top: 50%;
-        left: 0%;
+        width: 60%;
+        top: 49%;
+        left: 8%;
         transform: translateY(-50%);
         text-align: left;
 }
 
 #certifications {
         position: absolute;
-        width: 850px;
+        width: 80%;
         top: 50%;
-        left: 100%;
+        left: 91%;
         transform: translate(-100%, -50%);
         text-align: right;
 }
 
+.show {
+        transition-property: transform, top;
+        transition-duration: 0.3s;
+        transition-timing-functions: ease;
+        transition-delay: 0.2s;
+}
+
 #projects.hidden {
-        display: none;
+        top: 100%;
+        transform: translate(-100%, 0%);
 }
 
 #languages.hidden {
-        display: none;
+        top: 100%;
+        transform: translateY(0%);
 }
 
 #certifications.hidden {
-        display: none;
+        top: 100%;
+        transform: translate(-100%, 0%);
 }
+
+
+
+
+
+
+
 
