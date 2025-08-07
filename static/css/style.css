@@ -7,6 +7,11 @@ body {
         height: 100vh;
         width: 100%;
         overflow: hidden;
+        user-select: none;
+}
+
+#navigation button, #carousel {
+        cursor: pointer;
 }
 
 #background {
@@ -20,6 +25,7 @@ body {
 
 img, button {
         border-radius: 10px;
+        box-shadow: 0 0 10px 4px #000;
 }
 
 p, button {
@@ -102,8 +108,6 @@ p, button {
         transform: translateX(-100%);
 }
 
-
-
 .unlocked {
         transition: transform 0.2s ease;
 }
@@ -115,7 +119,14 @@ p, button {
 .locked {
         position: relative;
         display: inline-block;
+}
+
+.locked img {
         filter: brightness(20%);
+}
+
+.locked p {
+        filter: brightness(50%);
 }
 
 .lock-symbol {
@@ -124,6 +135,7 @@ p, button {
         left: 0;
         opacity: 0;
         transition: opacity 0.3s ease;
+        box-shadow: none;
 }
 
 .lock-symbol:hover {
@@ -143,6 +155,14 @@ p, button {
 
 #showcase img {
         margin: 1em 2em;
+}
+
+#showcase p {
+        text-shadow: 
+        -2px 2px 5px #000,
+         2px 2px 5px #000,
+         -2px -2px 5px #000,
+         2px -2px 5px #000;
 }
 
 #projects {
