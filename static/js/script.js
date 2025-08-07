@@ -87,6 +87,15 @@ certButton.addEventListener('click', () => {
         setLangsVisibility(false);
 });
 
+carousel.addEventListener('click', () => {
+        setCarouselState('center');
+        setProjVisibility(false);
+        setCertsVisibility(false);
+        setLangsVisibility(false);
+});
+
+
+
 
 
 

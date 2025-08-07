@@ -6,8 +6,16 @@
 body {
         height: 100vh;
         width: 100%;
-        background-color: #000;
         overflow: hidden;
+}
+
+#background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: brightness(50%);
+        border-radius: 0px;
 }
 
 img, button {
@@ -47,10 +55,14 @@ p, button {
         box-shadow: 0 0 10px 4px #f00;
 }
 
+@keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+}
+
 .highlight img {
-        transform: scale(1.5);
         box-shadow: 0 0 10px 2px #f00;
-        transition: transform 0.2s ease;
+        animation: pulse 1.5s infinite ease-in-out;
 }
 
 #menu {
@@ -69,6 +81,7 @@ p, button {
         transition-property: transform, left;
         transition-duration: 0.3s;
         transition-timing-function: ease; 
+        z-index: 99;
 }
 
 #carousel.left {
@@ -109,6 +122,11 @@ p, button {
         position: absolute;
         top: 0;
         left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+}
+
+.lock-symbol:hover {
         opacity: 1;
 }
 
@@ -162,16 +180,19 @@ p, button {
 }
 
 #projects.hidden {
+        visibility: hidden;
         top: 100%;
         transform: translate(-100%, 0%);
 }
 
 #languages.hidden {
+        visibility: hidden;
         top: 100%;
         transform: translateY(0%);
 }
 
 #certifications.hidden {
+        visibility: hidden;
         top: 100%;
         transform: translate(-100%, 0%);
 }
