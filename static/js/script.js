@@ -9,8 +9,25 @@ const github = document.getElementById('github');
 const credly = document.getElementById('credly');
 
 function setCarouselState(state) {
-        carousel.classList.remove('left', 'center', 'right');
-        carousel.classList.add(state);
+        return new Promise(resolve => {
+                currentState = carousel.className;
+                if (currentState == 'left' && state == 'left') {
+                        carousel.classList.remove('left');
+                        carousel.classList.add('right');
+
+                        setTimeout(() => {
+                                carousel.classList.remove('right');
+                                carousel.classList.add('left');
+
+                                resolve();
+                        }, 300);
+                } else {
+                        carousel.classList.remove('left', 'center', 'right');
+                        carousel.classList.add(state);
+
+                        resolve();
+                }
+        });
 }
 
 function setProjVisibility(show) {
@@ -63,28 +80,25 @@ function setLangsVisibility(show) {
         }
 }
 
-projButton.addEventListener('click', () => {
-        console.log('proj');
-        setCarouselState('left');
-        setProjVisibility(true);
+projButton.addEventListener('click', async () => {
         setCertsVisibility(false);
         setLangsVisibility(false);
+        await setCarouselState('left');
+        setProjVisibility(true);
 });
 
 langButton.addEventListener('click', () => {
-        console.log('lang');
         setCarouselState('right');
         setProjVisibility(false);
         setCertsVisibility(false);
         setLangsVisibility(true);
 });
 
-certButton.addEventListener('click', () => {
-        console.log('cert');
-        setCarouselState('left');
+certButton.addEventListener('click', async () => {
         setProjVisibility(false);
-        setCertsVisibility(true);
         setLangsVisibility(false);
+        await setCarouselState('left');
+        setCertsVisibility(true);
 });
 
 carousel.addEventListener('click', () => {
