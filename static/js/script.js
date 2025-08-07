@@ -83,6 +83,7 @@ function setLangsVisibility(show) {
 projButton.addEventListener('click', async () => {
         setCertsVisibility(false);
         setLangsVisibility(false);
+        setProjVisibility(false);
         await setCarouselState('left');
         setProjVisibility(true);
 });
@@ -97,6 +98,7 @@ langButton.addEventListener('click', () => {
 certButton.addEventListener('click', async () => {
         setProjVisibility(false);
         setLangsVisibility(false);
+        setCertsVisibility(false);
         await setCarouselState('left');
         setCertsVisibility(true);
 });
