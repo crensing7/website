@@ -33,6 +33,10 @@ p, button {
         font-weight: bold;
 }
 
+#navigation {
+        margin-bottom: 2px;
+}
+
 #navigation div {
         display: inline-block;
 }
